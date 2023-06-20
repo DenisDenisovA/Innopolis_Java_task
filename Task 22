@@ -1,0 +1,8 @@
+Вернуть сумму квадратов чисел от 1 до n включительно.
+
+public static int sqrSum(int n)  {
+  int sum=0;
+  for (int x=1;x<=n;x++){
+  sum=(x*x)+sum;}
+   return sum;
+}

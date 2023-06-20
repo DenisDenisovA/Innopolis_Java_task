@@ -1,0 +1,22 @@
+Реализовать функцию reverse, которая принимает массив array(int[]). Функция должна перевернуть массив, то есть первый элемент становится 
+последним, второй предпоследним, ..., последний элемент первым.
+Запрещено использовать Collections.reverse.
+
+Пример
+int array[] = {7, 5, 9, 1, 4};
+reverse(array);
+
+for (int i = 0; i < array.length; i++) {   
+    System.out.print(array[i] + " ");
+}// Напечатает // 4 1 9 5 7 
+
+public static void reverse(int[] array) {
+    int x,y;
+    for (x = 0; x < array.length / 2; x++) {
+        y = array[x];
+        array[x] = array[array.length - x - 1];
+        array[array.length - x - 1] = y;
+    }
+
+}
+

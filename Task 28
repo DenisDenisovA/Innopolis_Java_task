@@ -1,0 +1,20 @@
+Реализовать функцию slice, которая принимает массив array(int[]), числа from и to. Функция должна вернуть элементы массива array от индекса 
+from (включая from) и до to.
+
+Пример
+int array[] = {7, 5, 9, 1, 4};
+int[] new_array = slice(array, 0, 4);
+for (int i = 0; i < new_array.length; i++) {   
+    System.out.print(new_array[i] + " ");
+} // Напечатает
+// 7 5 9 1 
+
+public static int[] slice(int[] array, int from, int to) {   
+    
+    int[] newArray = new int[to-from];
+    
+    for (int x = 0; x < newArray.length; x++)        
+    newArray[x] = array[from+x];
+       
+    return newArray;
+}

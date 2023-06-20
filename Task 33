@@ -1,0 +1,21 @@
+Дается массив чисел, найти в массиве такой элемент, где сумма чисел слева равна сумме чисел справа.
+Если такое число есть, то вернуть true, в противном случае false.
+
+Пример
+Возьмем массив 1, 2, 9, 8, 5, 7
+
+Число 8 является элементом, где сумма чисел слева равна сумме чисел справа.
+1   2   9   8   5   7
+(1+2+9)=12  ↑  (5+7)=12
+
+public static boolean perfectlyBalanced(int[] array) {
+     int leftSum=0;
+        int rightSum=0;
+        for (int x = 0; x < array.length/2; x++) {
+            leftSum+=array[x];
+            if (leftSum==rightSum) return true;
+            rightSum+=array[array.length-x-1];
+            if (leftSum==rightSum) return true;
+    }
+    return false;
+}

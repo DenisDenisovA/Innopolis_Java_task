@@ -1,0 +1,13 @@
+Дается число n. Вернуть сумму от 1 до n без использования циклов.
+
+static int x = 1;
+    static int sum = 1;
+    public static int sum1n(int a) {
+
+        if (x < a) {
+            sum = sum + (x + 1);
+            x++;
+            sum1n(a);
+        }
+        return sum;
+    }

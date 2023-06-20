@@ -1,0 +1,24 @@
+import java.util.Scanner;
+//Создать программу выводящую в консоль "Ёлочку" с заданным количеством строк высоты
+public class student {
+    public static void main(String[] args) {
+        System.out.println("Введите число для определения высоты Ёлочки");
+        Scanner in=new Scanner(System.in);
+        int height = in.nextInt();
+        int number = 0;
+        int leftSide = height;
+        int rightSide = height;
+
+        for (int x = 0; x < height; x++) {
+            number=0;
+            for (int y = 0; y < height*2; y++) {
+                if (number < leftSide | number > rightSide)
+                    System.out.print(" ");
+                else System.out.print("*");
+                number++;
+            }System.out.println();
+            leftSide = leftSide - 1;
+            rightSide = rightSide + 1;
+        }
+    }
+}

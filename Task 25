@@ -1,0 +1,14 @@
+Имплементировать метод equal, который принимает 2 массива типа []int и возвращает true, если оба массива идентичны, false в противоположном случае.
+Пример
+int array1[] = {7, 5, 9, 1, 4};
+int array2[] = {7, 5, 9, 1, 4};
+boolean is_equal = equal(array1, array2);
+System.out.println(is_equal); // <-- выведет true
+
+public static boolean equal(int[] array1, int[] array2)       
+    if (array1.length != array2.length ) return false;             
+    for (int x=0; x<array1.length;x++){
+                    if (array1[x]!=array2[x]) return false;            
+    } 
+            return true;
+        }

@@ -1,0 +1,29 @@
+Реализовать функцию range_min_max, которая принимает массив array(int[]), числа min и max. Функция должна вернуть массив из элементов array, 
+где каждый элемент больше min включительно и меньше max включительно.
+
+Пример
+int array[] = {7, 5, 9, 1, 4};
+int[] new_array = range_min_max(array, 3, 5);
+for (int i = 0; i < new_array.length; i++) {   
+    System.out.print(new_array[i] + " ");} // Напечатает 5 4  
+
+
+
+
+public static int[] rangeMinMax(int[] array, int min, int max) {
+   int sizeNewArray = 0;
+        
+    for (int x = 0; x < array.length; x++)
+            if (array[x] >= min & array[x] <= max)
+                sizeNewArray += 1;
+       
+    int[] newArray = new int[sizeNewArray];
+    int indexNewArray= 0;
+        
+    for (int x = 0; x < array.length; x++)
+            if (array[x] >= min & array[x] <= max)
+            { newArray[indexNewArray] = array[x];
+        indexNewArray++;}
+    
+    return newArray;
+}

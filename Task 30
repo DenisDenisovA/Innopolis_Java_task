@@ -1,0 +1,19 @@
+Реализовать функцию join, которая принимает массивы array1 и array2. Функция должна объединить оба массива в один и вернуть новый сложившийся.
+
+Пример
+int array1[] = {7, 5, 9, 1, 4};
+int array2[] = {1, 2, 3, 4, 5};
+
+int new_array[] = join(array1, array2);
+for (int i = 0; i < new_array.length; i++) {
+    System.out.print(new_array[i] + " ");
+} // Напечатает // 7 5 9 1 4 1 2 3 4 5
+
+public static int[] join(int[] array1, int[] array2) {
+     int[] newArray = new int[array1.length + array2.length];
+       for (int x = 0; x < newArray.length; x++) {
+            if (x<array1.length) newArray[x] = array1[x];
+            if (x<array2.length) newArray[newArray.length - 1 - x] = array2[array2.length - 1 - x];
+        }
+    return newArray;
+}
